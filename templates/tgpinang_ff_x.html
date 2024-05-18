@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="128x128"
+      href="../asset/coba 1.png"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="{{url_for('static', filename='tailwind.js')}}"></script>
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{url_for('static', filename='asset/logo.png')}}"
+    />
+    <title>Kecepatan Angin Maksimum - Tanjungpinang</title>
+  </head>
+  <body>
+    <nav
+      class="flex flex-row max-w-6xl container mx-auto justify-between border-b-2 border-Arrow-Header-Footer py-10"
+    >
+      <a href="/">
+        <svg
+          width="197"
+          height="46"
+          viewBox="0 0 197 46"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M53 31.75H69" stroke="#339CFD" stroke-width="4.75" />
+          <path d="M0 13.75H16" stroke="#339CFD" stroke-width="4.75" />
+          <path d="M0 22.75H69" stroke="#162D50" stroke-width="4.75" />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M11.8743 20.375C11.7916 21.1625 11.75 21.9552 11.75 22.75H34.5L57.25 22.75C57.25 19.7624 56.6616 16.8041 55.5183 14.044C54.375 11.2838 52.6992 8.77586 50.5867 6.66332C48.4741 4.55079 45.9662 2.87504 43.206 1.73174C40.4459 0.588446 37.4876 1.30591e-07 34.5 0C31.5124 -1.30591e-07 28.5541 0.588446 25.794 1.73174C23.0338 2.87503 20.5259 4.55079 18.4133 6.66332C16.3008 8.77585 14.625 11.2838 13.4817 14.044C13.1991 14.7264 12.9503 15.4209 12.736 16.125H35.385C36.2734 16.125 37.191 15.6615 37.9472 14.7793C38.7144 13.8842 39.125 12.7682 39.125 11.875C39.125 9.92098 37.3403 7.625 34.875 7.625C32.3333 7.625 30.625 9.6208 30.625 11.875H26.375C26.375 7.4992 29.7667 3.375 34.875 3.375C40.0597 3.375 43.375 7.96402 43.375 11.875C43.375 13.9143 42.5106 15.9858 41.174 17.5451C39.8265 19.1173 37.8116 20.375 35.385 20.375H11.8743Z"
+            fill="#162D50"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M57.1257 25.1251C57.2084 24.3376 57.25 23.5449 57.25 22.75H34.5L11.75 22.75C11.75 25.7377 12.3384 28.6961 13.4817 31.4563C14.625 34.2166 16.3008 36.7246 18.4133 38.8372C20.5258 40.9498 23.0338 42.6256 25.7939 43.7689C28.5541 44.9123 31.5124 45.5007 34.5 45.5007C37.4876 45.5007 40.4459 44.9123 43.206 43.7689C45.9662 42.6256 48.4741 40.9498 50.5867 38.8372C52.6992 36.7246 54.375 34.2166 55.5183 31.4563C55.8009 30.7739 56.0497 30.0793 56.264 29.3751H33.615C32.7266 29.3751 31.809 29.8387 31.0528 30.7209C30.2856 31.6161 29.875 32.7321 29.875 33.6253C29.875 35.5795 31.6597 37.8756 34.125 37.8756C36.6666 37.8756 38.375 35.8797 38.375 33.6253H42.625C42.625 38.0012 39.2334 42.1256 34.125 42.1256C28.9403 42.1256 25.625 37.5364 25.625 33.6253C25.625 31.5861 26.4894 29.5144 27.8259 27.9551C29.1735 26.3829 31.1884 25.1251 33.615 25.1251H57.1257Z"
+            fill="#339CFD"
+          />
+          <path
+            d="M95.2976 31.7504H92.6816L92.3456 29.9264C91.3616 31.4144 89.7296 32.1344 87.7856 32.1344C83.2016 32.1344 80.2016 28.8944 80.2016 23.6144C80.2016 18.3344 83.2016 15.0464 88.1216 15.0464C91.6256 15.0464 94.6016 16.9424 95.2976 20.6624H91.2656C90.8096 19.0544 89.6576 18.1904 88.0256 18.1904C85.5536 18.1904 84.1376 20.2304 84.1376 23.6144C84.1376 26.9984 85.6256 28.9904 88.1456 28.9904C89.8976 28.9904 91.3616 28.0304 91.6256 25.8224H88.5056V22.9184H95.2976V31.7504ZM97.9328 31.7504V15.4304H104.605C108.421 15.4304 110.773 17.3504 110.773 20.3744C110.773 22.1744 110.029 23.4224 108.733 24.1904C109.477 24.7424 109.933 25.5584 110.221 26.7584L111.445 31.7504H107.437L106.525 27.4784C106.213 26.0144 105.709 25.7024 104.317 25.7024H101.773V31.7504H97.9328ZM104.533 18.4784H101.773V22.7264H104.437C106.045 22.7264 106.813 21.8624 106.813 20.5904C106.813 19.3184 106.021 18.4784 104.533 18.4784ZM127.295 25.5344C127.295 29.6144 124.631 32.1344 120.335 32.1344C115.991 32.1344 113.351 29.6144 113.351 25.5344V15.4304H117.215V25.5344C117.215 27.7184 118.367 29.0384 120.335 29.0384C122.303 29.0384 123.455 27.7184 123.455 25.5344V15.4304H127.295V25.5344ZM129.849 26.7824V23.6384H136.497V26.7824H129.849ZM139.206 31.7504V15.4304H145.878C149.694 15.4304 152.046 17.3504 152.046 20.3744C152.046 22.1744 151.302 23.4224 150.006 24.1904C150.75 24.7424 151.206 25.5584 151.494 26.7584L152.718 31.7504H148.71L147.798 27.4784C147.486 26.0144 146.982 25.7024 145.59 25.7024H143.046V31.7504H139.206ZM145.806 18.4784H143.046V22.7264H145.71C147.318 22.7264 148.086 21.8624 148.086 20.5904C148.086 19.3184 147.294 18.4784 145.806 18.4784ZM166.721 27.5024C166.049 30.4784 163.649 32.1344 160.481 32.1344C156.473 32.1344 154.001 29.5424 154.001 25.2944C154.001 20.9024 156.497 18.4304 160.337 18.4304C164.201 18.4304 166.625 20.9984 166.625 25.2224V26.0384H157.745C157.937 28.1024 158.897 29.2064 160.481 29.2064C161.681 29.2064 162.497 28.6784 162.881 27.5024H166.721ZM160.337 21.3584C158.969 21.3584 158.105 22.2464 157.817 23.9264H162.833C162.545 22.2464 161.681 21.3584 160.337 21.3584ZM168.855 31.7504V15.4304H172.695V28.6304H179.871V31.7504H168.855ZM195.405 25.5344C195.405 29.6144 192.741 32.1344 188.445 32.1344C184.101 32.1344 181.461 29.6144 181.461 25.5344V15.4304H185.325V25.5344C185.325 27.7184 186.477 29.0384 188.445 29.0384C190.413 29.0384 191.565 27.7184 191.565 25.5344V15.4304H195.405V25.5344Z"
+            fill="#162D50"
+          />
+        </svg>
+      </a>
+
+      <ul class="flex flex-row gap-x-12 items-center">
+        <!-- Dropdown Tanjungpinang -->
+        <li>
+          <a
+            href="/tanjungpinang/kecepatan_angin_rata_rata"
+            class="flex gap-x-1 items-center text-sm font-Switzer font-semibold text-Navigation-text hover:text-Highlight-txt"
+          >
+            Kecepatan angin rata-rata
+          </a>
+        </li>
+
+        <!-- Dropdown Anambas -->
+        <li>
+          <a
+            href="/tanjungpinang/kecepatan_angin_maksimum"
+            class="flex gap-x-1 items-center text-sm font-Switzer font-semibold text-Navigation-text hover:text-Highlight-txt"
+          >
+            Kecepatan angin maksimum
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Hero sections -->
+    <section class="hero max-w-6xl mx-auto mt-11 mb-11">
+      <div class="flex flex-row justify-between w-full">
+        <div class="flex flex-col gap-y-8 w-1/2">
+          <p
+            class="font-Switzer font-semibold text-sm tracking-tight text-Breadcrumb"
+          >
+            Home/Tanjungpinang/Kecepatan angin maksimum
+          </p>
+          <h1
+            class="font-Switzer text-[64px] font-Medium leading-[105%] text-Heading text-Heading"
+          >
+            Prediksi kecepatan angin maksimum
+            <span class="text-Highlight-txt">Kota Tanjungpinang</span>
+          </h1>
+        </div>
+
+        <div class="w-1/2 flex items-center justify-center">
+          <div class="flex items-center justify-end w-full h-full">
+            <!-- Background SVG -->
+            <div class="relative">
+              <!-- Logo -->
+              <img
+                src="{{url_for('static', filename='asset/Lambang_Kota_Tanjungpinang.png')}}"
+                alt="Logo"
+                class="absolute w-1/2 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
+              />
+              <div>
+                <svg
+                  width="401"
+                  height="393"
+                  viewBox="0 0 401 393"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="1.45159"
+                    y="1.62786"
+                    width="397.921"
+                    height="389.688"
+                    rx="12.4601"
+                    stroke="#E5EDFB"
+                    stroke-width="2.74428"
+                  />
+                  <rect
+                    x="23.4057"
+                    y="23.5821"
+                    width="354.012"
+                    height="345.779"
+                    rx="12.4601"
+                    stroke="#E5EDFB"
+                    stroke-width="2.74428"
+                  />
+                  <rect
+                    x="45.3603"
+                    y="45.5364"
+                    width="310.104"
+                    height="301.871"
+                    rx="12.4601"
+                    stroke="#E5EDFB"
+                    stroke-width="2.74428"
+                  />
+                  <rect
+                    x="67.3144"
+                    y="67.4906"
+                    width="266.195"
+                    height="257.962"
+                    rx="12.4601"
+                    stroke="#E5EDFB"
+                    stroke-width="2.74428"
+                  />
+                  <rect
+                    x="89.2687"
+                    y="89.4477"
+                    width="222.287"
+                    height="214.048"
+                    rx="12.4601"
+                    stroke="#E5EDFB"
+                    stroke-width="2.74428"
+                  />
+                  <rect
+                    x="110.336"
+                    y="111.247"
+                    width="180.152"
+                    height="170.173"
+                    rx="12.4601"
+                    stroke="#E5EDFB"
+                    stroke-width="2.74428"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prediksi sections -->
+    <section
+      class="prediksi max-w-6xl mx-auto mt-11 border-b-2 border-Arrow-Header-Footer mb-11"
+    >
+      <form method="POST" class="flex flex-col gap-y-5 pb-10">
+        <h2 class="font-Switzer text-[40px] font-Medium text-Heading">
+          Model GRU-ReLU
+        </h2>
+
+        <div class="flex justify-start items-center gap-2">
+          <a
+            href="/tanjungpinang/kecepatan_angin_maksimum/dataset"
+            class="flex items-center gap-x-1 font-Switzer font-semibold text-sm tracking-tight border border-Btn-outline-secondary2 text-Btn-txt-secondary rounded-xl px-5 py-3 hover:bg-Btn-hover-primary hover:text-white"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="ai ai-Data"
+            >
+              <ellipse cx="12" cy="6" rx="8" ry="3" />
+              <path
+                d="M6.037 12C4.77 12.53 4 13.232 4 14c0 1.657 3.582 3 8 3s8-1.343 8-3c0-.768-.77-1.47-2.037-2"
+              />
+              <path d="M4 6v4c0 1.657 3.582 3 8 3s8-1.343 8-3V6" />
+              <path d="M4 14v4c0 1.657 3.582 3 8 3s8-1.343 8-3v-4" /></svg
+            >Dataset</a
+          >
+          <a
+            href="/tanjungpinang/kecepatan_angin_maksimum/model"
+            class="flex items-center gap-x-1 font-Switzer font-semibold text-sm tracking-tight border border-Btn-outline-secondary2 text-Btn-txt-secondary rounded-xl px-5 py-3 hover:bg-Btn-hover-primary hover:text-white"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="ai ai-Air"
+            >
+              <path d="M3 8h7a3 3 0 1 0-3-3" />
+              <path d="M4 16h11a3 3 0 1 1-3 3" />
+              <path d="M2 12h17a3 3 0 1 0-3-3" /></svg
+            >Model</a
+          >
+        </div>
+
+        <div class="flex flex-row gap-x-2 justify-between w-1/3">
+          <div
+            class="rounded-[12px] flex flex-row gap-x-2 items-center border border-Btn-outline-secondary w-full px-4 py-3"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.5 17.5L13.7616 13.755M15.8333 8.74999C15.8333 10.6286 15.087 12.4303 13.7586 13.7587C12.4303 15.087 10.6286 15.8333 8.74996 15.8333C6.87134 15.8333 5.06967 15.087 3.74129 13.7587C2.4129 12.4303 1.66663 10.6286 1.66663 8.74999C1.66663 6.87137 2.4129 5.0697 3.74129 3.74132C5.06967 2.41293 6.87134 1.66666 8.74996 1.66666C10.6286 1.66666 12.4303 2.41293 13.7586 3.74132C15.087 5.0697 15.8333 6.87137 15.8333 8.74999Z"
+                stroke="#717275"
+                stroke-width="1.66667"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <input
+              name="input"
+              type="text"
+              placeholder="Kec. maks"
+              class="font-Switzer font-Regular text-base leading-normal text-Body-text outline-none"
+            />
+          </div>
+          <button
+            type="submit"
+            class="font-Switzer font-semibold text-sm tracking-tight bg-Btn-bg-primary text-white rounded-xl px-5 py-3 hover:bg-Btn-hover-primary"
+          >
+            Prediksi
+          </button>
+        </div>
+      </form>
+      {% if prediksi %}
+      <p
+        class="font-Switzer font-medium text-2xl text-Heading leading-tight pb-8"
+      >
+        Hasil Prediksi Kecepatan Angin Esok Hari: {{prediksi}} m/s
+      </p>
+      {% endif %}
+    </section>
+  </body>
+</html>
