@@ -20,7 +20,7 @@ def buat_dataset_timeseries(dataset, timeseries=1):
 
 
 # Mengimpor data
-link_data_set = 'https://raw.githubusercontent.com/ReziAfrialdi/dataset-skripsi/main/laporan_iklim_anambas_ff_avg.csv'
+link_data_set = 'https://raw.githubusercontent.com/ReziAfrialdi/dataset-skripsi/main/laporan_harian_iklim_anambas_ff_avg_new.csv'
 data_kecepatan_angin = pd.read_csv(link_data_set)
 data_ff_avg_anb = pd.read_csv(link_data_set)
 
@@ -48,7 +48,7 @@ X_train, X_test = X[:train_size], X[train_size:]
 Y_train, Y_test = Y[:train_size], Y[train_size:]
 
 # Load model
-model_filename='GRU_FF_AVG_ANAMBAS.keras'
+model_filename='GRU_FF_AVG_ANAMBAS_NEW.keras'
 model = tf.keras.models.load_model(model_filename)
 
 

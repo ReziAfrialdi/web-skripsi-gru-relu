@@ -25,7 +25,7 @@ def get_day_of_year(date_string):
 def index():
     return render_template('index.html')
 
-# Tanjungpinang Kecepatan angin maksimum
+# Tanjungpinang Kecepatan angin rata-rata  
 @app.route('/tanjungpinang/kecepatan_angin_rata_rata', methods=['GET', 'POST'])
 def tgpinang_ff_avg():
     prediksi = False
@@ -129,7 +129,7 @@ def anambas_ff_avg_model():
     
     
     if request.method == 'GET':
-        filename = 'GRU_FF_AVG_ANAMBAS.json'
+        filename = 'GRU_FF_AVG_ANAMBAS1.json'
     
         with open(filename, 'r') as file :
             performance_data = json.load(file)

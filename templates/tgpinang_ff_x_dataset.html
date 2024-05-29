@@ -81,7 +81,7 @@
           <p
             class="font-Switzer font-semibold text-sm tracking-tight text-Breadcrumb"
           >
-            Home/Tanjungpinang/Kecepatan angin maksimum
+            Home/Tanjungpinang/Kecepatan angin maksimum/dataset
           </p>
           <h1
             class="font-Switzer text-[64px] font-Medium leading-[105%] text-Heading text-Heading"
@@ -230,19 +230,24 @@
         <thead>
           <tr>
             <th
-              class="px-4 py-2 border-b border-dark-border text-left text-lg font-medium text-white-2"
+              class="px-4 py-2 border-b border-dark-border font-Switzer text-left text-lg text-Heading"
             >
               No.
             </th>
             <th
-              class="px-4 py-2 border-b border-dark-border text-left text-lg font-medium text-white-2"
+              class="px-4 py-2 border-b border-dark-border font-Switzer text-left text-lg text-Heading"
             >
               Tanggal
             </th>
             <th
-              class="px-4 py-2 border-b border-dark-border text-left text-lg font-medium text-white-2"
+              class="px-4 py-2 border-b border-dark-border font-Switzer text-left text-lg text-Heading"
             >
               ff_x
+            </th>
+            <th
+              class="px-4 py-2 border-b border-dark-border font-Switzer text-left text-lg text-Heading"
+            >
+              Satuan
             </th>
           </tr>
         </thead>
@@ -250,19 +255,24 @@
           {% for i in range(data['Tanggal']|length) %}
           <tr>
             <td
-              class="px-4 py-2 border-b border-dark-border text-base text-white-2"
+              class="px-4 py-2 border-b border-dark-border font-Switzer font-Regular text-base text-Body-text"
             >
               {{i+1}}
             </td>
             <td
-              class="px-4 py-2 border-b border-dark-border text-base text-white-2"
+              class="px-4 py-2 border-b border-dark-border font-Switzer font-Regular text-base text-Body-text"
             >
               {{data['Tanggal'].values[i]}}
             </td>
             <td
-              class="px-4 py-2 border-b border-dark-border text-base text-white-2"
+              class="px-4 py-2 border-b border-dark-border font-Switzer font-Regular text-base text-Body-text"
             >
               {{data['ff_x'].values[i]}}
+            </td>
+            <td
+              class="px-4 py-2 border-b border-dark-border font-Switzer font-Regular text-base text-Body-text"
+            >
+              m/s
             </td>
           </tr>
           {% endfor %}

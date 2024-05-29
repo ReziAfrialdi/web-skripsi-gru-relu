@@ -140,7 +140,7 @@ def predict_multiple_day(day, Y_test, timeseries,scaler, model):
 
 
 # Mengimpor data
-link_data_set = 'https://raw.githubusercontent.com/ReziAfrialdi/dataset-skripsi/main/laporan_iklim_anambas_ff_avg.csv'
+link_data_set = 'https://raw.githubusercontent.com/ReziAfrialdi/dataset-skripsi/main/laporan_harian_iklim_anambas_ff_avg_new.csv'
 data_kecepatan_angin = pd.read_csv(link_data_set)
 
 # Mengonversi kolom 'Tanggal' ke tipe datetime
@@ -195,7 +195,7 @@ print(f'MAPE: {mape:.2f}%')
 print(f'Akurasi: {akurasi:.2f}%')
 
 
-model_name = "GRU_FF_AVG_ANAMBAS"
+model_name = "GRU_FF_AVG_ANAMBAS_NEW"
 save_model_and_metrics(model, model_name, mse, rmse, mae, mape, akurasi)
 
 plot_data_aktual_data_prediksi(data_kecepatan_angin,actual_train,train_size,train_predict,actual_test,test_predict)
