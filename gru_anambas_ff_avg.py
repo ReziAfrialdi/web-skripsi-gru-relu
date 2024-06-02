@@ -6,7 +6,6 @@ import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 import tensorflow as tf
 
-
 # Modifikasi fungsi buat_dataset
 def buat_dataset_timeseries(dataset, timeseries=1):
     X, Y = [], []
@@ -17,7 +16,6 @@ def buat_dataset_timeseries(dataset, timeseries=1):
         X.append(a)
         Y.append(b)
     return np.array(X), np.array(Y)
-
 
 # Mengimpor data
 link_data_set = 'https://raw.githubusercontent.com/ReziAfrialdi/dataset-skripsi/main/laporan_harian_iklim_anambas_ff_avg_new.csv'
@@ -34,12 +32,13 @@ data_kecepatan_angin.set_index('Tanggal', inplace=True)
 scaler = MinMaxScaler(feature_range=(0, 1))
 data_scaled = scaler.fit_transform(data_kecepatan_angin)
 
-timeseries = 1
+timeseries = 5
 
 # Mengubah bentuk input menjadi [samples, time steps, features]
 X, Y = buat_dataset_timeseries(data_scaled, timeseries)
 # X= np.reshape(Y, (Y.shape[0], timeseries, 1))
 X = np.reshape(X, (X.shape[0], timeseries, 1))
+X_data_ff_avg_anb = X
 
 # Membagi data menjadi 70% training dan 30% testing
 train_size = int(len(X) * 0.7)
@@ -50,8 +49,6 @@ Y_train, Y_test = Y[:train_size], Y[train_size:]
 # Load model
 model_filename='GRU_FF_AVG_ANAMBAS_NEW.keras'
 model = tf.keras.models.load_model(model_filename)
-
-
 
 def predict_ff_avg_anb(input_data):
     # Menambah dimensi agar sesuai dengan format yang diharapkan oleh scaler.transform()
@@ -67,7 +64,15 @@ def predict_ff_avg_anb(input_data):
     prediction = scaler.inverse_transform(prediction_scaled)
     return prediction[0, 0]
 
-
+def predict_original_data_ff_avg_anb(input_data) :
+    predictions = model.predict(input_data)
+    results = scaler.inverse_transform(predictions).flatten()
+    data = []
+    for i in range(len(results)):
+        data.append(round(float(results[i]),3))
+    for i in range(timeseries):
+        data.insert(0,"-")
+    return data
 
 def predict_multiple_day_ff_avg_anb(day):
     data_y= Y_test

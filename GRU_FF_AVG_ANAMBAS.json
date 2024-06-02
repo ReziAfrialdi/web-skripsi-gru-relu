@@ -1,8 +1,0 @@
-{
-    "MSE": 0.9341158541804557,
-    "RMSE": 0.9664966912413387,
-    "MAE": 0.702044677734375,
-    "MAPE": Infinity,
-    "AKURASI": -Infinity,
-    "model_name": "GRU_FF_AVG_ANAMBAS"
-}

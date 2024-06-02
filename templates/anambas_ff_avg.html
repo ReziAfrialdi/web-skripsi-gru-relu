@@ -17,7 +17,7 @@
       type="image/png"
       href="{{url_for('static', filename='asset/logo.png')}}"
     />
-    <title>Kecepatan Angin Rata-Rata - Anambas</title>
+    <title>Prediksi ff_avg - Kabupaten Kep Anambas</title>
   </head>
   <body>
     <nav
@@ -83,7 +83,7 @@
           <p
             class="font-Switzer font-semibold text-sm tracking-tight text-Breadcrumb"
           >
-            Home/Anambas/Kecepatan angin rata-rata
+            Home/Anambas/Kecepatan angin rata-rata/prediksi
           </p>
           <h1
             class="font-Switzer text-[64px] font-Medium leading-[105%] text-Heading text-Heading"
@@ -219,11 +219,11 @@
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="ai ai-Air"
+              class="ai ai-StatisticUp"
             >
-              <path d="M3 8h7a3 3 0 1 0-3-3" />
-              <path d="M4 16h11a3 3 0 1 1-3 3" />
-              <path d="M2 12h17a3 3 0 1 0-3-3" /></svg
+              <path d="M3 3v16a2 2 0 0 0 2 2h16" />
+              <path d="M7 14l4-4 4 4 6-6" />
+              <path d="M18 8h3v3" /></svg
             >Model</a
           >
         </div>
@@ -269,6 +269,47 @@
         Hasil Prediksi Kecepatan Angin Esok Hari: {{prediksi}} m/s
       </p>
       {% endif %}
+    </section>
+
+    <section
+      class="max-w-6xl mx-auto mt-11 border-b-2 border-Arrow-Header-Footer pb-11 mb-11"
+    >
+      <h3 class="font-Switzer text-[40px] font-Medium text-Heading">
+        Prediksi 7 hari kedepan dari dataset (Prediksi 7 hari 2023)
+      </h3>
+      <table>
+        <thead>
+          <tr>
+            <th
+              class="px-4 py-2 border-b border-dark-border font-Switzer text-left text-lg text-Heading"
+            >
+              No.
+            </th>
+            <th
+              class="px-4 py-2 border-b border-dark-border font-Switzer text-left text-lg text-Heading"
+            >
+              Prediksi
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for i in range(forecasting|length) %}
+          <tr>
+            <td
+              class="px-4 py-2 border-b border-dark-border font-Switzer font-Regular text-base text-Body-text"
+            >
+              {{i+1}}
+            </td>
+
+            <td
+              class="px-4 py-2 border-b border-dark-border font-Switzer font-Regular text-base text-Body-text"
+            >
+              {{forecasting[i]}} m/s
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     </section>
   </body>
 </html>
